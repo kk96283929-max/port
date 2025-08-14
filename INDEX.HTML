@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rahul Kumar | Portfolio</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #f0f4ff, #d9e6ff);
+    color: #1a1a1a;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+
+  /* Fixed nav */
+  header {
+    position: fixed;
+    width: 100%;
+    background: #0d47a1;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    padding: 0.75rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    cursor: default;
+    user-select: none;
+  }
+  nav {
+    display: flex;
+    gap: 1.6rem;
+  }
+  nav a {
+    color: #bbdefb;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  nav a:hover, nav a.active {
+    background: #e3f2fd;
+    color: #0d47a1;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 6rem auto 3rem; /* extra top margin for fixed header */
+    padding: 0 1rem;
+  }
+
+  section {
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #0d47a1;
+    border-bottom: 3px solid #0d47a1;
+    padding-bottom: 0.3rem;
+  }
+
+  p.intro {
+    font-style: italic;
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+  }
+
+  ul {
+    list-style: inside disc;
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    color: #34495e;
+  }
+
+  /* Friends grid */
+  .friends-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+    gap: 1rem;
+  }
+  .friend {
+    background: linear-gradient(145deg, #dcefff, #b7d1ff);
+    border-radius: 12px;
+    padding: 1rem;
+    font-weight: 700;
+    color: #0d47a1;
+    text-align: center;
+    box-shadow: 4px 4px 8px #a3c1ff,
+                -4px -4px 8px #f3f9ff;
+    cursor: default;
+    user-select: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .friend:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 8px 8px 15px #a3c1ff,
+                -8px -8px 15px #f3f9ff;
+  }
+
+  /* Contact box */
+  .contact-info {
+    background: #0d47a1;
+    color: white;
+    padding: 2rem;
+    border-radius: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 10px 25px rgba(13,71,161,0.6);
+    font-size: 1.1rem;
+  }
+  .contact-info p, .contact-info a {
+    margin-bottom: 1rem;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  .contact-info a:hover {
+    color: #a8d0ff;
+    text-decoration: underline;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1.5rem 1rem 3rem;
+    color: #666;
+    font-size: 0.9rem;
+    user-select: none;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      gap: 0.6rem;
+      padding: 1rem 1.5rem;
+    }
+    nav {
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    main {
+      margin: 7rem 1rem 3rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Rahul Kumar</h1>
+  <nav>
+    <a href="#intro" class="active">About</a>
+    <a href="#strengths">Strengths</a>
+    <a href="#growth">Growth</a>
+    <a href="#friends">Friends</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section id="intro" class="visible">
+    <p class="intro">
+      I’m a code architect, digital maker, and hands-on problem solver who thrives where innovation meets execution. With a passion for building smooth, user-first experiences, I specialize in transforming ambitious ideas into reliable, scalable digital products. Whether I’m developing custom web applications, streamlining workflows, or designing intuitive interfaces, I focus on clean, efficient code that blends function with finesse. Let’s create something remarkable—something smart, seamless, and built to last.
+    </p>
+  </section>
+
+  <section id="strengths">
+    <h2>Strengths</h2>
+    <ul>
+      <li>Strong problem-solving and analytical skills</li>
+      <li>Adaptable to new tools, technologies, and challenges</li>
+      <li>Effective communicator with a collaborative mindset</li>
+      <li>Self-motivated with a consistent drive for improvement</li>
+    </ul>
+  </section>
+
+  <section id="growth">
+    <h2>Areas for Growth</h2>
+    <ul>
+      <li>Working on saying “no” to avoid overcommitting</li>
+      <li>Improving focus during long, complex tasks</li>
+      <li>Developing stronger delegation and task-sharing habits</li>
+      <li>Continuously refining time-blocking and prioritization</li>
+      <li>Learning to embrace imperfection and ship faster</li>
+    </ul>
+  </section>
+
+  <section id="friends">
+    <h2>My Friends</h2>
+    <div class="friends-list">
+      <div class="friend">Rudra</div>
+      <div class="friend">Shyam</div>
+      <div class="friend">Gulshan</div>
+      <div class="friend">Vikash</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>📞 Contact</h2>
+    <div class="contact-info">
+      <p>Email: <a href="mailto:rahul305802@gmail.com">rahul305802@gmail.com</a></p>
+      <p>Call Me: <a href="tel:+919120226258">+91-9120226258</a></p>
+      <p>GitHub: <a href="https://github.com/rahulbyteforge" target="_blank" rel="noopener noreferrer">github.com/rahulbyteforge</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/rahulbyteforge" target="_blank" rel="noopener noreferrer">linkedin.com/in/rahulbyteforge</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Rahul Kumar. All rights reserved.
+</footer>
+
+<script>
+  // Scroll reveal animations
+  const sections = document.querySelectorAll('main section');
+
+  function revealOnScroll() {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    sections.forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top;
+      if (sectionTop < triggerBottom) {
+        section.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll(); // initial check
+
+  // Highlight nav links based on scroll position
+  const navLinks = document.querySelectorAll('nav a');
+
+  function highlightNav() {
+    let scrollPos = window.scrollY || window.pageYOffset;
+
+    sections.forEach(section => {
+      const top = section.offsetTop - 80; // offset for fixed header
+      const bottom = top + section.offsetHeight;
+      const id = section.id;
+
+      if (scrollPos >= top && scrollPos < bottom) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + id) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }
+
+  window.addEventListener('scroll', highlightNav);
+  highlightNav();
+</script>
+
+</body>
+</html>
